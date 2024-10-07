@@ -27,6 +27,7 @@ These options may be applied as additional-properties (cli) or configOptions (pl
 |reservedWordPrefix|Prefix to prepend to reserved words in order to avoid conflicts| |r_|
 |sortModelPropertiesByRequiredFlag|Sort model properties to place required parameters before optional parameters.| |true|
 |sortParamsByRequiredFlag|Sort method arguments to place required parameters before optional parameters.| |true|
+|stripAccents|boolean, toggles whether we should strip accents before normalizing names| |false|
 |variableNameFirstCharacterUppercase|Make first character of variable name uppercase (eg. value -&gt; Value)| |true|
 
 ## IMPORT MAPPING
