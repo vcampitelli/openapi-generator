@@ -38,6 +38,8 @@ public class BashClientOptionsProvider implements OptionsProvider {
                                 = "PETSTORE_APIKEY";
     public static final String ALLOW_UNICODE_IDENTIFIERS_VALUE
                                 = "false";
+    public static final String STRIP_ACCENTS_VALUE
+                                = "false";
     public static final String PREPEND_FORM_OR_BODY_PARAMETERS_VALUE = "true";
     public static final String ENUM_UNKNOWN_DEFAULT_CASE_VALUE = "false";
 
@@ -70,6 +72,7 @@ public class BashClientOptionsProvider implements OptionsProvider {
                 .put(CodegenConstants.SORT_MODEL_PROPERTIES_BY_REQUIRED_FLAG, "false")
                 .put(CodegenConstants.ENSURE_UNIQUE_PARAMS, "false")
                 .put(CodegenConstants.ALLOW_UNICODE_IDENTIFIERS, ALLOW_UNICODE_IDENTIFIERS_VALUE)
+                .put(CodegenConstants.STRIP_ACCENTS, STRIP_ACCENTS_VALUE)
                 .put(CodegenConstants.PREPEND_FORM_OR_BODY_PARAMETERS, PREPEND_FORM_OR_BODY_PARAMETERS_VALUE)
                 .put(CodegenConstants.LEGACY_DISCRIMINATOR_BEHAVIOR, "true")
                 .put(CodegenConstants.DISALLOW_ADDITIONAL_PROPERTIES_IF_NOT_PRESENT, "true")

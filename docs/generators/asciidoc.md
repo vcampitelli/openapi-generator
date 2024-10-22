@@ -40,6 +40,7 @@ These options may be applied as additional-properties (cli) or configOptions (pl
 |sortModelPropertiesByRequiredFlag|Sort model properties to place required parameters before optional parameters.| |true|
 |sortParamsByRequiredFlag|Sort method arguments to place required parameters before optional parameters.| |true|
 |specDir|path with includable markup spec files (e.g. handwritten additional docs, default: ..)| |..|
+|stripAccents|boolean, toggles whether we should strip accents before normalizing names| |false|
 |useIntroduction|use introduction section, rather than an initial abstract (default: false)| |false|
 |useMethodAndPath|Use HTTP method and path as operation heading, instead of operation id (default: false)| |false|
 |useTableTitles|Use titles for tables, rather than wrapping tables instead their own section (default: false)| |false|

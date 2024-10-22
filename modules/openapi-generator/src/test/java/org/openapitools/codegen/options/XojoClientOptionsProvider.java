@@ -56,6 +56,7 @@ public class XojoClientOptionsProvider implements OptionsProvider {
                 .put(CodegenConstants.SORT_PARAMS_BY_REQUIRED_FLAG, "true")
                 .put(CodegenConstants.ENSURE_UNIQUE_PARAMS, "true")
                 .put(CodegenConstants.ALLOW_UNICODE_IDENTIFIERS, "false")
+                .put(CodegenConstants.STRIP_ACCENTS, "false")
                 .put(CodegenConstants.DISALLOW_ADDITIONAL_PROPERTIES_IF_NOT_PRESENT, "false")
                 .build();
     }

@@ -40,6 +40,7 @@ public class ElixirClientOptionsProvider implements OptionsProvider {
                 .put(CodegenConstants.SORT_MODEL_PROPERTIES_BY_REQUIRED_FLAG, "false")
                 .put(CodegenConstants.ENSURE_UNIQUE_PARAMS, "false")
                 .put(CodegenConstants.ALLOW_UNICODE_IDENTIFIERS, "false")
+                .put(CodegenConstants.STRIP_ACCENTS, "false")
                 .put(CodegenConstants.INVOKER_PACKAGE, "Yay.Pets")
                 .put("licenseHeader", "# Copyright 2017 Me\n#\n# Licensed under the Apache License")
                 .put(CodegenConstants.PACKAGE_NAME, "yay_pets")

@@ -38,6 +38,7 @@ public class TypeScriptNestjsClientOptionsProvider implements OptionsProvider {
     private static final String NMP_VERSION = "1.1.2";
     private static final String NPM_REPOSITORY = "https://registry.npmjs.org";
     public static final String ALLOW_UNICODE_IDENTIFIERS_VALUE = "false";
+    public static final String STRIP_ACCENTS_VALUE = "false";
     public static final String NEST_VERSION = "6";
     public static final String PREPEND_FORM_OR_BODY_PARAMETERS_VALUE = "true";
     public static final String FILE_NAMING_VALUE = "camelCase";
@@ -84,6 +85,7 @@ public class TypeScriptNestjsClientOptionsProvider implements OptionsProvider {
                 .put(TypeScriptNestjsClientCodegen.MODEL_SUFFIX, MODEL_SUFFIX)
                 .put(TypeScriptNestjsClientCodegen.MODEL_FILE_SUFFIX, MODEL_FILE_SUFFIX)
                 .put(CodegenConstants.ALLOW_UNICODE_IDENTIFIERS, ALLOW_UNICODE_IDENTIFIERS_VALUE)
+                .put(CodegenConstants.STRIP_ACCENTS, STRIP_ACCENTS_VALUE)
                 .put(CodegenConstants.PREPEND_FORM_OR_BODY_PARAMETERS, PREPEND_FORM_OR_BODY_PARAMETERS_VALUE)
                 .put(CodegenConstants.LEGACY_DISCRIMINATOR_BEHAVIOR, "true")
                 .put(CodegenConstants.DISALLOW_ADDITIONAL_PROPERTIES_IF_NOT_PRESENT, "true")

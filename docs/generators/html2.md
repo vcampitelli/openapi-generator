@@ -39,6 +39,7 @@ These options may be applied as additional-properties (cli) or configOptions (pl
 |pythonPackageName|package name for generated python code| |null|
 |sortModelPropertiesByRequiredFlag|Sort model properties to place required parameters before optional parameters.| |true|
 |sortParamsByRequiredFlag|Sort method arguments to place required parameters before optional parameters.| |true|
+|stripAccents|boolean, toggles whether we should strip accents before normalizing names| |false|
 
 ## IMPORT MAPPING
 
