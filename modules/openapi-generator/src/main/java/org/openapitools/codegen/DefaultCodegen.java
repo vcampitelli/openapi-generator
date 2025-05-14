@@ -264,6 +264,8 @@ public class DefaultCodegen implements CodegenConfig {
     protected Boolean ensureUniqueParams = true;
     @Getter @Setter
     protected Boolean allowUnicodeIdentifiers = false;
+    @Getter @Setter
+    protected Boolean stripAccents = false;
     protected String gitHost, gitUserId, gitRepoId, releaseNote;
     protected String httpUserAgent;
     protected Boolean hideGenerationTimestamp = true;
@@ -372,6 +374,7 @@ public class DefaultCodegen implements CodegenConfig {
         convertPropertyToBooleanAndWriteBack(CodegenConstants.PREPEND_FORM_OR_BODY_PARAMETERS, this::setPrependFormOrBodyParameters);
         convertPropertyToBooleanAndWriteBack(CodegenConstants.ENSURE_UNIQUE_PARAMS, this::setEnsureUniqueParams);
         convertPropertyToBooleanAndWriteBack(CodegenConstants.ALLOW_UNICODE_IDENTIFIERS, this::setAllowUnicodeIdentifiers);
+        convertPropertyToBooleanAndWriteBack(CodegenConstants.STRIP_ACCENTS, this::setStripAccents);
         convertPropertyToStringAndWriteBack(CodegenConstants.API_NAME_PREFIX, this::setApiNamePrefix);
         convertPropertyToStringAndWriteBack(CodegenConstants.API_NAME_SUFFIX, this::setApiNameSuffix);
         convertPropertyToStringAndWriteBack(CodegenConstants.MODEL_NAME_PREFIX, this::setModelNamePrefix);
@@ -1748,6 +1751,8 @@ public class DefaultCodegen implements CodegenConfig {
         // name formatting options
         cliOptions.add(CliOption.newBoolean(CodegenConstants.ALLOW_UNICODE_IDENTIFIERS, CodegenConstants
                 .ALLOW_UNICODE_IDENTIFIERS_DESC).defaultValue(Boolean.FALSE.toString()));
+        cliOptions.add(CliOption.newBoolean(CodegenConstants.STRIP_ACCENTS, CodegenConstants
+                .STRIP_ACCENTS_DESC).defaultValue(Boolean.FALSE.toString()));
         // option to change the order of form/body parameter
         cliOptions.add(CliOption.newBoolean(CodegenConstants.PREPEND_FORM_OR_BODY_PARAMETERS,
                 CodegenConstants.PREPEND_FORM_OR_BODY_PARAMETERS_DESC).defaultValue(Boolean.FALSE.toString()));
@@ -6422,7 +6427,11 @@ public class DefaultCodegen implements CodegenConfig {
             return "value";
         }
 
-        SanitizeNameOptions opts = new SanitizeNameOptions(name, removeCharRegEx, exceptionList);
+        SanitizeNameOptions opts = new SanitizeNameOptions(
+                (stripAccents) ? StringUtils.stripAccents(name) : name,
+                removeCharRegEx,
+                exceptionList
+        );
 
         return sanitizedNameCache.get(opts, sanitizeNameOptions -> {
             String modifiable = sanitizeNameOptions.getName();

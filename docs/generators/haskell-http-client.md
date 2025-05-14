@@ -47,6 +47,7 @@ These options may be applied as additional-properties (cli) or configOptions (pl
 |sortModelPropertiesByRequiredFlag|Sort model properties to place required parameters before optional parameters.| |true|
 |sortParamsByRequiredFlag|Sort method arguments to place required parameters before optional parameters.| |true|
 |strictFields|Add strictness annotations to all model fields| |true|
+|stripAccents|boolean, toggles whether we should strip accents before normalizing names| |false|
 |useKatip|Sets the default value for the UseKatip cabal flag. If true, the katip package provides logging instead of monad-logger| |true|
 
 ## IMPORT MAPPING

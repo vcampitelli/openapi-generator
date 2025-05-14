@@ -49,6 +49,7 @@ public class Swift5OptionsProvider implements OptionsProvider {
     public static final String HASHABLE_MODELS_VALUE = "true";
     public static final String USE_JSON_ENCODABLE_VALUE = "true";
     public static final String ALLOW_UNICODE_IDENTIFIERS_VALUE = "false";
+    public static final String STRIP_ACCENTS_VALUE = "false";
     public static final String PREPEND_FORM_OR_BODY_PARAMETERS_VALUE = "true";
     public static final String LIBRARY_VALUE = "alamofire";
     public static final String USE_SPM_FILE_STRUCTURE_VALUE = "false";
@@ -85,6 +86,7 @@ public class Swift5OptionsProvider implements OptionsProvider {
                 .put(Swift5ClientCodegen.USE_BACKTICK_ESCAPES, USE_BACKTICKS_ESCAPES_VALUE)
                 .put(CodegenConstants.HIDE_GENERATION_TIMESTAMP, "true")
                 .put(CodegenConstants.ALLOW_UNICODE_IDENTIFIERS, ALLOW_UNICODE_IDENTIFIERS_VALUE)
+                .put(CodegenConstants.STRIP_ACCENTS, STRIP_ACCENTS_VALUE)
                 .put(CodegenConstants.PREPEND_FORM_OR_BODY_PARAMETERS, PREPEND_FORM_OR_BODY_PARAMETERS_VALUE)
                 .put(CodegenConstants.API_NAME_PREFIX, "")
                 .put(CodegenConstants.LIBRARY, LIBRARY_VALUE)

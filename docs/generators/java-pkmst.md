@@ -71,6 +71,7 @@ These options may be applied as additional-properties (cli) or configOptions (pl
 |sortParamsByRequiredFlag|Sort method arguments to place required parameters before optional parameters.| |true|
 |sourceFolder|source folder for generated code| |src/main/java|
 |springBootAdminUri|Spring-Boot URI| |null|
+|stripAccents|boolean, toggles whether we should strip accents before normalizing names| |false|
 |testOutput|Set output folder for models and APIs tests| |${project.build.directory}/generated-test-sources/openapi|
 |title|server title name or client service name| |null|
 |useJakartaEe|whether to use Jakarta EE namespace instead of javax| |false|
